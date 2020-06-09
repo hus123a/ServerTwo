@@ -5,10 +5,10 @@ import com.alibaba.fastjson.JSONObject;
 import com.catcoder.demo.utils.ConditionTree;
 import com.catcoder.demo.vo.ConditionInput;
 import com.catcoder.demo.vo.OrgTreeNode;
-import org.mountcloud.graphql.GraphqlClient;
+/*import org.mountcloud.graphql.GraphqlClient;
 import org.mountcloud.graphql.request.query.DefaultGraphqlQuery;
 import org.mountcloud.graphql.request.query.GraphqlQuery;
-import org.mountcloud.graphql.response.GraphqlResponse;
+import org.mountcloud.graphql.response.GraphqlResponse;*/
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
@@ -39,7 +39,7 @@ public class TreeApiImpl implements TreeApi {
 
     private Map getRemoteTreeMap(String queryName, ConditionTree conditionTree) throws IOException {
         Map<String, String> headers = new HashMap<>(2);
-        headers.put("MCUBE_TENANT_CODE", "mcube");
+       /* headers.put("MCUBE_TENANT_CODE", "mcube");
         GraphqlClient graphqlClient = GraphqlClient.buildGraphqlClient(DATA_URL);
         graphqlClient.setHttpHeaders(headers);
         GraphqlQuery query = new DefaultGraphqlQuery(queryName);
@@ -58,6 +58,7 @@ public class TreeApiImpl implements TreeApi {
         query.addResultAttributes("id","name","type","parentId","sortNo");
         GraphqlResponse response = graphqlClient.doQuery(query);
         //获取数据，数据为map类型
-        return response.getData();
+        return response.getData();*/
+        return headers;
     }
 }
