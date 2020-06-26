@@ -21,6 +21,8 @@ public class NacosController {
 
     private static Logger logger =  LoggerFactory.getLogger(NacosController.class);
 
+
+
     @Value(value = "${testConfig:2}")
     private String useLocalCache;
 
@@ -47,6 +49,8 @@ public class NacosController {
     public String get2() {
         return url;
     }
+
+
 
 }
 
