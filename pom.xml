@@ -7,6 +7,7 @@
         <module>serverTwo-api</module>
         <module>serverTwo-process</module>
         <module>serverTwo-client</module>
+        <module>serverTwo-orm</module>
     </modules>
     <parent>
         <groupId>org.example</groupId>
